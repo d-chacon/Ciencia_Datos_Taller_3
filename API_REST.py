@@ -19,16 +19,16 @@ def drop_columns(X):
 
 
 # Cargar los pipelines con pickle
-with open('knn_model.pkl', 'rb') as file:
+with open('models/knn_model.pkl', 'rb') as file:
     knn_model = pickle.load(file)
 
-with open('logreg_model.pkl', 'rb') as file:
+with open('models/logreg_model.pkl', 'rb') as file:
     logreg_model = pickle.load(file)
 
-with open('svm_model.pkl', 'rb') as file:
+with open('models/svm_model.pkl', 'rb') as file:
     svm_model = pickle.load(file)
 
-with open('rf_model.pkl', 'rb') as file:
+with open('models/rf_model.pkl', 'rb') as file:
     rf_model = pickle.load(file)
     
 @app.route('/<model_version>/predict', methods=['POST'])
